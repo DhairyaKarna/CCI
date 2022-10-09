@@ -8,17 +8,23 @@ int w = 0;
 
 void merge(int* a, int l, int mid, int h){
 
-    int i_ = mid;
-    int j_ = h;
-    while(i_>=l && j_>=mid+1){
+    int i_ = l;
+    int j_ = mid+1;
+
+    cout<<"l "<<l<<" mid = "<<mid<<" h = "<<h<<endl;
+    
+    while(i_<=mid && j_<=h){
+        //cout<<"..................."<<endl;
+        //cout<<"i_ = "<<i_<<" j_ = "<<j_<<" a[i_] = "<<a[i_]<<" a[j_] = "<<a[j_]<<endl;
         if (a[i_]>(2*a[j_])){
-            w = w + j_ - mid;
-            i_--;
+            w += mid - i_ +1;
+            j_++;
         }
         else{
-            j_--;
+            i_++;
         }
     }
+    //cout<<"xxxxxxxxxxxxxxxxx"<<endl;
 
     int i = l;
     int j = mid+1;
