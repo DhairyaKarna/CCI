@@ -1,0 +1,1 @@
+No factorial for negative numbers
