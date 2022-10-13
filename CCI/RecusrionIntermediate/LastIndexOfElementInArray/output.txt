@@ -1,2 +1,3 @@
 Element present at index by Ans1 = 3
 Element present at index by Ans2 = 3
+Element present at index by Ans3 = 3
