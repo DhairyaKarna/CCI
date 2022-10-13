@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Checking through Iterator from n-1 to 1
 int positionOfLastAppearance(int a[], int n, int v, int i){
 
     //Base Case
@@ -22,6 +23,29 @@ int positionOfLastAppearance(int a[], int n, int v, int i){
         return -1;
 
 }
+
+//Checking without iterator by reducing size of element
+int positionOfLastAppearance2(int a[], int n, int v){
+
+    //Base Case
+    if(n==0){
+        if(a[n]==v) return n;
+        else return -1;
+    }   
+
+    //Calculation
+    if(a[n]==v)
+        return n;
+
+    //Recursion
+    int position = positionOfLastAppearance2(a, n-1, v);
+    if(position!=-1)
+        return position;
+    else
+        return -1;
+
+}
+
 
 int main(){
 
@@ -45,11 +69,17 @@ int main(){
     cin>>v;
 
     int ans = positionOfLastAppearance(a,n,v,n-1);
+    int ans2 = positionOfLastAppearance2(a,n,v);
 
     if(ans!=-1)
-        cout<<"Element present at index = "<<ans;
+        cout<<"Element present at index by Ans1 = "<<ans<<endl;
     else
-        cout<<"Element not present";
+        cout<<"Element not present by Ans1"<<endl;
+
+    if(ans2!=-1)
+        cout<<"Element present at index by Ans2 = "<<ans;
+    else
+        cout<<"Element not present by Ans2";
 
     return 0;
 }
