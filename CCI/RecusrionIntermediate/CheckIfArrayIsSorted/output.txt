@@ -1,1 +1,2 @@
-Sorted
+Ans1 = Sorted
+Ans2 = Sorted

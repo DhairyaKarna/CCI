@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Sum using only array
 int sumArray(int a[], int n){
 
     //Base Case
@@ -16,6 +17,23 @@ int sumArray(int a[], int n){
     int sum = a[0]+smallSum;
     return sum;
 }
+
+//Sum using Iterator
+int sumArray2(int a[], int n, int i){
+
+    //Base Case
+    if(i==n){
+        return 0;
+    }
+
+    //Recursion
+    int smallSum = sumArray2(a,n,i+1);
+
+    //Calculation
+    int sum = a[i]+smallSum;
+    return sum;
+}
+
 
 int main(){
     
@@ -38,8 +56,10 @@ int main(){
     }
 
     int ans = sumArray(a, n);
+    int ans2 = sumArray2(a, n, 0);
 
-    cout<<ans;
+    cout<<"Ans1 = "<<ans<<endl;
+    cout<<"Ans2 = "<<ans2;
     
     return 0;
 }
