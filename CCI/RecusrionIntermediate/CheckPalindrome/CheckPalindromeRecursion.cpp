@@ -3,7 +3,7 @@
 using namespace std;
 
 bool checkPalindrome(int a[], int start, int end){
-
+    
     if(start>end)
         return true;
 
