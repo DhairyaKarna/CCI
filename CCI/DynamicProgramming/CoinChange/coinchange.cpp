@@ -49,7 +49,7 @@ int coinChangeBU(int* c, int n, int target){
     for(int i =1; i<target+1; i++){
         int mini = INT16_MAX;
         for(int j =0; j<n; j++){
-            if(i-c[j]>=0){
+            if(i-c[j]>=0 && m[i-c[j]]!=INT16_MAX){
                 if(m[i-c[j]]==0){
                     mini=1;
                 }
