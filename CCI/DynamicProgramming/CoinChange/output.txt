@@ -1,0 +1,3 @@
+Min Coins by Recursion : 3
+Min Coins by TD: 3
+Min Coins by BU: 3
