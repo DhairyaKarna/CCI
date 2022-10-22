@@ -1,0 +1,3 @@
+Top Down Answer: 89
+Bottom Up Answer: 89
+Bottom Up Optimized Answer: 89
