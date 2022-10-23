@@ -1,0 +1,2 @@
+Max Value for rod of length with TD 8 is 22
+Max Value for rod of length with BU 8 is 22
