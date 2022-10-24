@@ -1,0 +1,3 @@
+Number of BST with node 5 are 42
+Number of BST by TD with node 5 are 42
+Number of BST by BU with node 5 are 42
