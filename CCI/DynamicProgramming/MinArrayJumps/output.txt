@@ -1,0 +1,2 @@
+Min number of jumps TD: 4
+Min number of jumps BU: 4
