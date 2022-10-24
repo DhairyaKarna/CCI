@@ -19,6 +19,25 @@ int LongestIncreasingSubsequence(int n, int* arr){
     return dp[n-1];
 }
 
+//Video Approach
+
+int LIS(int* arr, int n){
+
+    vector<int> dp(n,1);
+
+    int len = 1;
+
+    for(int i = 1; i<n; i++){
+        for(int j = 0; j<i; j++){
+            if(arr[i]>arr[j]){
+                dp[i] = max(dp[i], dp[j]+1);
+                len = max(len, dp[i]);
+            }
+        }
+    }
+    return len;
+}
+
 int main(){
 
     ios_base::sync_with_stdio(0);
@@ -40,7 +59,11 @@ int main(){
 
     int ans = LongestIncreasingSubsequence(n, arr);
 
-    cout<<"Longest Increasing Subsequence Length is: "<<ans;
+    cout<<"Longest Increasing Subsequence Length is: "<<ans<<endl;
+
+    int ans1 = LIS(arr, n);
+
+    cout<<"Longest Increasing Subsequence Length by Video is: "<<ans1;
 
     return 0;
 }
