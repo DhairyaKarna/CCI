@@ -9,11 +9,19 @@ struct Node {
     Node(int val) : val(val), left(nullptr), right(nullptr) {}
 };
 
-int main(){
+// In Inorder Traversal Logic is done after going to left child and before right child
+// Inorder - in the middle of children
+void dfs(Node* node){
+    if(node==nullptr){
+        return;
+    }
+    
+    dfs(node->left);
+    cout<<node->val<<endl;
+    dfs(node->right);
+}
 
-    ios_base::sync_with_stdio(0);
-    cin.tie(NULL);
-
+int main() {
     /*
     The following code builds a tree that looks like:
         0
@@ -28,7 +36,5 @@ int main(){
     root->left = one;
     root->right = two;
     
-    
-    cout << root->left->val << endl; // Prints 1
-    cout << root->right->val << endl; // Prints 2
+    dfs(root);
 }
